@@ -12,7 +12,7 @@ s = f.readlines()
 
 def check_str(strin):
     for i in range(1, len(w) - 2):
-        if (strin[i-1] == 'K') and (strin[i+1:i+3] == 'GE'):
+        if (strin[i - 1] == 'K') and (strin[i + 1:i + 3] == 'GE'):
             return True
 
     return False
@@ -20,10 +20,8 @@ def check_str(strin):
 
 count = 0
 
-
 for w in s:
     if check_str(w):
         count += 1
-
 
 print(count)

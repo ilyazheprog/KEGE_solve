@@ -7,5 +7,5 @@
 
 a = [i for i in range(int('1000', 8), int('10000', 8))
      if (i % 4 == 0 and len(oct(i)[2:]) == 4)]
-     
+
 print(len(a))

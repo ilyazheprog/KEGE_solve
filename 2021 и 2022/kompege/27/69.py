@@ -3,8 +3,7 @@
 f = open('C:\\Users\\XiaoMai\\Downloads\\27-B.txt')
 n = int(f.readline())
 
-
-ost_c, ost_n = [0]*13, [0]*13
+ost_c, ost_n = [0] * 13, [0] * 13
 c = 0
 
 for _ in range(n):
@@ -22,19 +21,12 @@ for _ in range(n):
     else:
         ost_n[ost] += 1
 
-
 print(c)
-
-
-
-
-
 
 # 2 Решение
 
 f = open('27-B.txt')
 n = int(f.readline())
-
 
 a = []
 c = 0
@@ -43,7 +35,7 @@ for _ in range(n):
     x = int(f.readline())
 
     for y in a:
-        if abs(x-y) % 13 == 0 and (x*y) % 2 == 0:
+        if abs(x - y) % 13 == 0 and (x * y) % 2 == 0:
             c += 1
 
     a.append(x)

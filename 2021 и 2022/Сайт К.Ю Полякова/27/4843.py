@@ -8,7 +8,7 @@ def F(n):
 
     while n > 0:
         s += (n % 3)
-        n = n//3
+        n = n // 3
 
     if s == 12:
         return 1
@@ -20,9 +20,7 @@ n, k, d = zn[0], zn[1], zn[2]
 
 len, c_os, sum, max_sum = 0, 0, 0, 0
 
-
-s = [[float('inf')]*d for _ in range(k)]
-
+s = [[float('inf')] * d for _ in range(k)]
 
 for _ in range(n):
     x = int(f.readline())
@@ -37,9 +35,8 @@ for _ in range(n):
         max_sum = max(max_sum, sum)
 
     if (s[c_os % k][len % d] != float('inf')):
-        max_sum = max(max_sum, sum-s[c_os % k][len % d])
+        max_sum = max(max_sum, sum - s[c_os % k][len % d])
 
     s[c_os % k][len % d] = min(s[c_os % k][len % d], sum)
-
 
 print(max_sum)

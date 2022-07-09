@@ -3,13 +3,12 @@
 f = open('C:\\Users\\XiaoMai\\Downloads\\27-19b.txt')
 n = int(f.readline())
 
-
 s = [1]
 max_pr = 0
 
 for i in range(n):
     x = int(f.readline())
-    s = [a*x for a in s]+[x]
+    s = [a * x for a in s] + [x]
 
     for a in s:
         if (a == 0):
@@ -18,14 +17,10 @@ for i in range(n):
 
 print(max_pr)
 
-
-
-
 # 2) Решение
 
 f = open('27-19b.txt')
 n = int(f.readline())
-
 
 mak, suma = 1, 1
 

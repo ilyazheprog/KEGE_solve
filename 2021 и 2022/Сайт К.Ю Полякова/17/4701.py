@@ -27,13 +27,11 @@ def number_found(x):
 max_17 = max(i for i in arr if i % 107 == 0)
 count, min_sum = 0, float('inf')
 
-
 for i in range(1, len(arr)):
-    if max(arr[i-1], arr[i]) > max_17:
-        bools = [number_found(arr[i-1]), number_found(arr[i])]
+    if max(arr[i - 1], arr[i]) > max_17:
+        bools = [number_found(arr[i - 1]), number_found(arr[i])]
         if (True in bools):
             count += 1
-            min_sum = min(min_sum, arr[i] + arr[i-1])
-
+            min_sum = min(min_sum, arr[i] + arr[i - 1])
 
 print(count, min_sum)

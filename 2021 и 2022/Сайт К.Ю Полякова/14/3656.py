@@ -3,6 +3,8 @@
 При каком основании количество нечётных цифр в записи этого числа будет максимальным? 
 Если таких оснований несколько, то укажите максимальное из них.
 '''
+
+
 # https://prnt.sc/DN-zV0gzidjt
 
 
@@ -22,5 +24,5 @@ def func(number, foundation):
     return count
 
 
-array = [func(456, j) for j in range(2, 10+1)][::-1]
+array = [func(456, j) for j in range(2, 10 + 1)][::-1]
 print(10 - array.index(max(array)))

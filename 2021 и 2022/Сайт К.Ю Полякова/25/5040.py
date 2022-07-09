@@ -28,7 +28,7 @@ def sys_numb(num):
     numb_9 = numb_system_9(num)
 
     for i in range(len(numb_9) - 1):
-        if numb_9[i] < numb_9[i+1]:
+        if numb_9[i] < numb_9[i + 1]:
             return False
 
     return num, sum(map(int, numb_9))
@@ -36,12 +36,10 @@ def sys_numb(num):
 
 parts = set()
 
-
 for i, j, m, n in product('0123456789 ', repeat=4):
     num = int(('3' + i + '458' + j + m + n + '3').replace(' ', ''))
-    if num <= 10**9 and sys_numb(num):
+    if num <= 10 ** 9 and sys_numb(num):
         parts.add(sys_numb(num))
-
 
 for i in sorted(parts, key=lambda d: d[0]):
     print(*i)

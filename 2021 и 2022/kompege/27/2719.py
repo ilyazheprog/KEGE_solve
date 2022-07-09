@@ -1,7 +1,6 @@
 f = open('27B.txt')
 n = int(f.readline())
 
-
 value_chet = [0, 0]
 
 k = 0

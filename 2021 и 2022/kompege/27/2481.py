@@ -1,7 +1,6 @@
 f = open('27_B.txt')
 n = int(f.readline())
 
-
 s = [0]
 
 for _ in range(n):

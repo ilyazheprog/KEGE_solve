@@ -10,6 +10,5 @@
 
 from itertools import *
 
-
-m = {x for x in product('СЛОН', repeat=5) if (x.count('С') == 1)} 
+m = {x for x in product('СЛОН', repeat=5) if (x.count('С') == 1)}
 print(len(m))

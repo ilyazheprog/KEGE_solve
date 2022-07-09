@@ -7,6 +7,8 @@ F(n) = F(n+2) + 3*F(n+5), при n ≤ 25, не кратных 3
 Определите количество натуральных значений n из отрезка [1; 1000], 
 для которых сумма цифр значения F(n) равна 24.
 '''
+
+
 # https://prnt.sc/jK4bMw-IFT5V
 
 
@@ -21,7 +23,6 @@ def F(n):
 
 count = 0
 
-
 for a in range(1, 1001):
     value = F(a)
     summ = 0
@@ -29,9 +30,8 @@ for a in range(1, 1001):
     while value:
         summ += (value % 10)
         value //= 10
-        
+
     if (summ == 24):
         count += 1
-
 
 print(count)

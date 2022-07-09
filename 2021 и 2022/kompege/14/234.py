@@ -8,11 +8,9 @@
 number = 2 * 27 ** 7 + 3 ** 10 - 9
 count = 0
 
-
 while number:
     if number % 3 == 0:
         count += 1
     number //= 3
-
 
 print(count)

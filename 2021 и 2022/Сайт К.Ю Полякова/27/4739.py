@@ -8,13 +8,13 @@ def F(n):
     while n:
         if (n % 5 == 2):
             c += 1
-        n = n//5
+        n = n // 5
     return c
 
 
 n, k = a[0], a[1]
 
-s = [float('inf')]*k
+s = [float('inf')] * k
 
 m, sum, c = 0, 0, 0
 
@@ -28,9 +28,8 @@ for _ in range(n):
     if (c % k == 0):
         m = max(m, sum)
 
-    m = max(m, sum-s[c % k])
+    m = max(m, sum - s[c % k])
 
     s[c % k] = min(s[c % k], sum)
-
 
 print(m)

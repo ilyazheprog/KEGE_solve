@@ -11,12 +11,9 @@ s = f.readline()
 s = s.replace('C', ' ')
 s = s.replace('D', ' ')
 
-
 max_len = 0
-
 
 for i in s.split():
     max_len = max(max_len, len(i))
 
- 
 print(max_len)

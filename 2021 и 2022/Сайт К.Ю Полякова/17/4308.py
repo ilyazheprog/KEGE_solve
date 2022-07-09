@@ -11,18 +11,15 @@
 f = open('17.txt')
 arr = [int(x) for x in f.readlines()]
 
-
 count, min_sum = 0, 0
 
+for i in range(1, len(arr) - 2):
+    a, b, c, e = int(arr[i - 1]), int(arr[i]), int(arr[i + 1]), int(arr[i + 2])
 
-for i in range(1, len(arr)-2): 
-    a, b, c, e = int(arr[i-1]),  int(arr[i]), int(arr[i+1]), int(arr[i+2])  
-    
-    if ((abs(a) % 2 != abs(b) % 2) and 
-            (abs(b) % 2 != abs(c) % 2)  and 
-                (abs(c) % 2 != abs(e) % 2)):
+    if ((abs(a) % 2 != abs(b) % 2) and
+            (abs(b) % 2 != abs(c) % 2) and
+            (abs(c) % 2 != abs(e) % 2)):
         min_sum = max(a + b + c + e, min_sum)
         count += 1
-
 
 print(count, min_sum)

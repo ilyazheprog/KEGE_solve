@@ -1,7 +1,6 @@
 f = open('файлик')
 n = int(f.readline())
 
-
 a = sorted([int(f.readline()) for _ in range(n)])
 
 maxl = 0
@@ -21,6 +20,5 @@ for e in range(len(a)):
             len = 1
             c = a[e]
             k += 1
-
 
 print(maxl)

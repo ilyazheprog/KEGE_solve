@@ -17,21 +17,18 @@
 f = open('24.txt')
 s = str(f.readline())
 
-
 max_time = 0
 
-
 for i in range(0, len(s) - 1):
-    if (int(s[i:i+2]) <= 23) and (int(s[i+2:i+4]) <= 59):
+    if (int(s[i:i + 2]) <= 23) and (int(s[i + 2:i + 4]) <= 59):
         j = i + 4
         count = 1
 
-        while ((int(s[j:j+2]) <= 23) and (int(s[j+2:j+4]) <= 59)):
+        while ((int(s[j:j + 2]) <= 23) and (int(s[j + 2:j + 4]) <= 59)):
             count += 1
             j += 4
 
     else:
         max_time = max(max_time, count)
-
 
 print(max_time)

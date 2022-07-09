@@ -1,7 +1,6 @@
 f = open('27-78b.txt')
 n = int(f.readline())
 
-
 s = [[0, [], 0]]
 max_sum = l_min = 0
 
@@ -9,7 +8,7 @@ max_sum = l_min = 0
 def gama(z, x):
     z.append(x)
     if len(z) > 2:
-        del(z[1])
+        del (z[1])
     return z
 
 

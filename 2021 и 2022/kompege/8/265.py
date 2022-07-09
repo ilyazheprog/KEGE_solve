@@ -18,11 +18,9 @@
 
 from itertools import *
 
-
 # важен порядок символов
-for i, letter in enumerate(product('АГИЛМОРТ', repeat=4), start=1):  
+for i, letter in enumerate(product('АГИЛМОРТ', repeat=4), start=1):
     if (letter[-2] == 'И') and (letter[-1] == 'М'):
         answer = i
-
 
 print(answer)

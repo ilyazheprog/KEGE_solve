@@ -1,8 +1,7 @@
 f = open('файлик')
 n = int(f.readline())
 
-
-sumax, sumin = 0, 0 
+sumax, sumin = 0, 0
 
 # в подходящих парах(второе число нечетное) сумма мин пары, в которой 1 число (МАКСИМУМ) - четное 2(МИНМУМ) число- четное
 s1 = s2 = s3 = s4 = float('inf')
@@ -27,8 +26,6 @@ for _ in range(n):
         if (max(a) % 2 == 1) and (min(a) % 2 == 0):
             s4 = min(sum(a), s4)
 
-
-
 # сначала мы просто нашли суммы макс и мин групп, а затем, в зависимости от четности вычитаем группы
 # четное-четное=четное
 # четное-нечетное=нечетное
@@ -37,13 +34,13 @@ for _ in range(n):
 
 
 if (sumax % 2 == 0) and (sumin % 2 == 1):
-    print(sumax+sumin)
+    print(sumax + sumin)
 
 if (sumax % 2 == 0) and (sumin % 2 == 0):
-    print(sumax+sumin-s3)
+    print(sumax + sumin - s3)
 
 if (sumax % 2 == 1) and (sumin % 2 == 1):
-    print(sumax+sumin-s4)
-    
+    print(sumax + sumin - s4)
+
 if (sumax % 2 == 1) and (sumin % 2 == 0):
-    print(sumax+sumin-s2)
+    print(sumax + sumin - s2)

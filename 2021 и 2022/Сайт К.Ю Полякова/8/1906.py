@@ -8,10 +8,8 @@
 
 from itertools import *
 
-
 a = [''.join(i) for i in product('КОРТИК', repeat=6)]
 a = set([word for word in a if (word.count('К') +
-        word.count('Р') + word.count('Т') >= 3)])
-
+                                word.count('Р') + word.count('Т') >= 3)])
 
 print(len(a))

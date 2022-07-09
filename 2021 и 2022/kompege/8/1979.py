@@ -9,14 +9,11 @@
 
 from itertools import *
 
-
 amount = 0
-
 
 for i in product('КРЕСЛО', repeat=4):
     word = ''.join(i)
     if (word[0] not in 'ЕО') and (word[-1] not in 'КРСЛ'):
         amount += 1
-
 
 print(amount)

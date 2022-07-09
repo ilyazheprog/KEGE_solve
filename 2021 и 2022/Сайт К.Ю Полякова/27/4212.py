@@ -1,11 +1,9 @@
 f = open('27b.txt')
 N = int(f.readline())
 
-
-k = {x: (10**30, 0) for x in range(69)}
+k = {x: (10 ** 30, 0) for x in range(69)}
 
 s, m, l = 0, 0, 0
-
 
 for i in range(N):
     x = int(f.readline())
@@ -18,6 +16,5 @@ for i in range(N):
 
     if s < k[s % 69][0]:
         k[s % 69] = (s, i + 1)
-
 
 print(l)

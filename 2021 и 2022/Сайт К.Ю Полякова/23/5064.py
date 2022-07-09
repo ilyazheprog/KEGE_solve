@@ -15,7 +15,6 @@
 
 from math import gcd
 
-
 unique = set()
 
 

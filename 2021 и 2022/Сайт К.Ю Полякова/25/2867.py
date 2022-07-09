@@ -9,9 +9,7 @@
 
 from itertools import *
 
-
 count_n, max_number = 0, 0
-
 
 for numb in range(300, 351):
     dividers = {1}
@@ -31,6 +29,5 @@ for numb in range(300, 351):
     if (amount > 0):
         count_n += 1
         max_number = max(max_number, numb)
-
 
 print(count_n, max_number)

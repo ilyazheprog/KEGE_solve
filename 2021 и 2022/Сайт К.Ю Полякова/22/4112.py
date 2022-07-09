@@ -8,8 +8,7 @@
 
 count = 0
 
-
-for i in range(int("100000", 16), int("FFFFFF", 16)+1):
+for i in range(int("100000", 16), int("FFFFFF", 16) + 1):
     x = i
     L, M = 0, 0
 
@@ -23,6 +22,5 @@ for i in range(int("100000", 16), int("FFFFFF", 16)+1):
 
     if L == 6 and M == 0:
         count += 1
-
 
 print(count)

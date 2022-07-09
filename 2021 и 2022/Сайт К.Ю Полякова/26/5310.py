@@ -14,9 +14,9 @@ for i in range(10_001):
     s = screen[i]
     for j in range(3, 10_001 - 3):
         if s[j] == '#00FF00' and \
-           all(p == '#0000FF'
-               for p in [s[j-3], s[j-2], s[j-1],
-                         s[j+1], s[j+2], s[j+3]]):
+                all(p == '#0000FF'
+                    for p in [s[j - 3], s[j - 2], s[j - 1],
+                              s[j + 1], s[j + 2], s[j + 3]]):
             pix[i] = pix.get(i, 0) + 1
             count += 1
 k = max(pix, key=lambda x: (pix[x], x))

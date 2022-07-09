@@ -10,6 +10,5 @@
 
 from itertools import *
 
-
-arr = [''.join(i) for i in product('ЛОДКА', repeat=4) if ((''.join(i)).count('О') >= 2)]       
+arr = [''.join(i) for i in product('ЛОДКА', repeat=4) if ((''.join(i)).count('О') >= 2)]
 print(len(arr))

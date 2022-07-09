@@ -6,7 +6,7 @@ def k5(x):
     if x % 5 == 1:
         return 0
 
-    if not(x):
+    if not (x):
         return 1
 
     return k5(x // 5)
@@ -15,7 +15,6 @@ def k5(x):
 s = {(0, 0): (0, 0)}
 
 m = 0
-
 
 for _ in range(N):
     x = int(f.readline())
@@ -27,6 +26,5 @@ for _ in range(N):
     s = {(x[0] % D, x[1] % K): x for x in sorted(c)}
 
     m = max(m, s.get((0, 0), (0, 0))[0])
-
 
 print(m)

@@ -7,11 +7,13 @@
 выводится само число, затем минимальный делитель, оканчивающийся на 8, 
 не равный 8 и самому числу.
 '''
+
+
 # https://prnt.sc/BXOtS0tFxAy8
 
 
 def find_dev(n):
-    dividers = sorted({(i, n//i) for i in range(2, int(n ** 0.5) + 1) if (n % i == 0)})
+    dividers = sorted({(i, n // i) for i in range(2, int(n ** 0.5) + 1) if (n % i == 0)})
     result = float('inf')
 
     for i in dividers:
@@ -28,7 +30,6 @@ def find_dev(n):
 
 i = 500_000
 count = 0
-
 
 while count < 5:
     i += 1

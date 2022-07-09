@@ -34,5 +34,4 @@ while '11' in strin:
     else:
         strin = strin.replace('11', '3', 1)
 
-
 print(sum(map(int, strin)))

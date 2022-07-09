@@ -23,7 +23,6 @@
 
 min_numb = float('inf')
 
-
 for i in range(101, 120):
     s = '3' * i
 
@@ -36,6 +35,5 @@ for i in range(101, 120):
     if min_numb > sum(map(int, s)):
         min_numb = sum(map(int, s))
         j = i
-
 
 print(j)

@@ -8,12 +8,10 @@
 number = 6 * 144 ** 26 + 11 * 12 ** 75 - 48
 arr = []
 
-
 while number:
     arr.append(number % 12)
     number //= 12
 
 arr = arr[::-1]  # не забывайте! (именно здесь не нужно)
-
 
 print(arr.count(11))

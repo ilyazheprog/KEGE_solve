@@ -1,13 +1,10 @@
 from itertools import combinations
 
-
 f = open('27B.txt')
 n = int(f.readline())
 
-
 k_23 = [[], []]
 k_other = [[], []]
-
 
 for _ in range(n):
     x = int(f.readline())
@@ -16,7 +13,6 @@ for _ in range(n):
         k_23[x % 2].append(x)
     else:
         k_other[x % 2].append(x)
-
 
 pick = []
 
@@ -27,7 +23,6 @@ for i in range(2):
 
     except:
         pass
-
 
 mak = 0
 

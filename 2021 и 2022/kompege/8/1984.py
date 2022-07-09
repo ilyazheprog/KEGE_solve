@@ -8,14 +8,11 @@
 
 from itertools import permutations
 
-
 count = 0
-
 
 for i in permutations('ИГРОК', r=5):
     word = ''.join(i)
     if (word[0] != 'К') and ('РОК' not in word):
         count += 1
-
 
 print(count)

@@ -11,18 +11,15 @@
 f = open('24.txt')
 s = f.readline()
 
-
 string = s[0]
 max_string = ''
 
-
 for i in range(len(s) - 1):
-    if (s[i] > s[i+1]):
-        string += s[i+1]
+    if (s[i] > s[i + 1]):
+        string += s[i + 1]
         if (len(max_string) < len(string)):
             max_string = string
     else:
-        string = s[i+1]
-
+        string = s[i + 1]
 
 print(max_string)

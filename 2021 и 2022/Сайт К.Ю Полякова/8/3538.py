@@ -15,7 +15,6 @@
 
 from itertools import *
 
-
 # В этом задании важен порядок кодировки символов, А-1, В-2, Д-3, П-4, Р-5
 
 for i, letter in enumerate(product('АВДПР', repeat=4), start=1):

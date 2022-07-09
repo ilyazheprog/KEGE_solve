@@ -21,10 +21,8 @@ BAQTUB
 
 f = open('24.txt')
 
-
 full_line, our_strin = '', ''
 max_q = 0
-
 
 for s in f:
     full_line += s
@@ -33,10 +31,8 @@ for s in f:
         max_q = s.count('Q')
         our_strin = s
 
-
 min_count = float('inf')
 min_line = ''
-
 
 for a in range(ord('A'), ord('Z') + 1):
     element = chr(a)
@@ -49,6 +45,5 @@ for a in range(ord('A'), ord('Z') + 1):
     if (count < min_count) and (count != 0):
         min_line = element
         min_count = count
-
 
 print(min_line, full_line.count(min_line))

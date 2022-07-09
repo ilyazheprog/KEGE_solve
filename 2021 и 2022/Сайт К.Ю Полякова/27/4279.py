@@ -1,14 +1,13 @@
 f = open('27-73a.txt')
 n = int(f.readline())
 
-
-s1 = [0]*93
+s1 = [0] * 93
 sumka = 0
 
 for i in range(n):
     x = int(f.readline())
 
-    s = [0]*93
+    s = [0] * 93
 
     for y in range(93):
         if s1[y] != 0:
@@ -24,6 +23,5 @@ for i in range(n):
             sumka = s[0]
 
     s1 = s
-
 
 print(sumka)

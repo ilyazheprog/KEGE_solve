@@ -16,5 +16,4 @@ for i in P | Q:
     if not f(i):
         A.add(i)
 
-
 print(prod(A))

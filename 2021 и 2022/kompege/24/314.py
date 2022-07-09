@@ -9,16 +9,13 @@
 f = open('24.txt')
 s = f.readline()
 
-
 count = 0
-
 
 # В 24 номере НАДО брать i элемент последним, ниже правильно, но
 # Есть задачи, где будет FFFFFF
 for i in range(len(s) - 3):
     # можно делать через каждый символ(без срезов), но это долго :)
-    if (s[i+2:i+5] == 'OCK') and (s[i:i+5] != 'STOCK'):
+    if (s[i + 2:i + 5] == 'OCK') and (s[i:i + 5] != 'STOCK'):
         count += 1
-
 
 print(count)

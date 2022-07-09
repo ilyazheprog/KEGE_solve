@@ -8,6 +8,8 @@
 перечислите найденные числа в порядке возрастания, справа от каждого запишите наибольший 
 из всех сомножителей, образующих подходящие пары.
 '''
+
+
 # https://prnt.sc/N4KkPz-CF6fH
 
 
@@ -17,7 +19,7 @@ def condition(n):
 
     for i in range(1, int(n ** 0.5) + 1):
         if n % i == 0:
-            pairs_dividers.add((i, n//i))
+            pairs_dividers.add((i, n // i))
 
     for x, y in pairs_dividers:
         if abs(x - y) <= 90:

@@ -8,9 +8,7 @@
 
 f = open('24-s1.txt')
 
-
 count = 0
-
 
 while True:
     s = f.readline()
@@ -18,9 +16,8 @@ while True:
         break
 
     for i in range(1, len(s) - 1):
-        if s[i-1] == 'A' and s[i+1] == 'R':
+        if s[i - 1] == 'A' and s[i + 1] == 'R':
             count += 1
             break
-
 
 print(count)

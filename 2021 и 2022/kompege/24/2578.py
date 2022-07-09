@@ -9,11 +9,9 @@
 f = open('24.txt')
 strin = f.readline()
 
-
 array = strin.split('.')
 
 mak = float('-inf')
-
 
 for s in array:
     for i in range(len(s)):
@@ -30,6 +28,5 @@ for s in array:
                 j += 1
 
         mak = max(mak, len(new_string))
-
 
 print(mak)

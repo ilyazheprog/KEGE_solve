@@ -10,14 +10,11 @@
 
 from itertools import product
 
-
 count = 0
-
 
 for i in product('1234', repeat=5):
     word = ''.join(i)
     if (word[0] != '1') and (word != word[::-1]):
         count += 1
-
 
 print(count)

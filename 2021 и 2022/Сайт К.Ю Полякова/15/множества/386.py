@@ -1,5 +1,5 @@
 A = set()
-P = set(range(1, 6+1))
+P = set(range(1, 6 + 1))
 Q = {3, 5, 15}
 
 
@@ -13,6 +13,5 @@ def f(x):
 for i in P | Q:
     if not f(i):
         A.add(i)
-
 
 print(len(A))

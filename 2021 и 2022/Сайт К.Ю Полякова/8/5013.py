@@ -13,20 +13,18 @@ from itertools import product
 def check(num):
     arr = list(num)
 
-    for i in range(len(arr)-1):
-        if arr[i+1] == arr[i]:
+    for i in range(len(arr) - 1):
+        if arr[i + 1] == arr[i]:
             return False
     return True
 
 
 count = 0
 
-
-for r in range(3, 9+1):
+for r in range(3, 9 + 1):
     for i in product('0123456', repeat=r):
         number = ''.join(i)
         if check(number):
             count += 1
-
 
 print(count)

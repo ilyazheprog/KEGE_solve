@@ -1,10 +1,8 @@
 f = open('27-95b.txt')
 n = int(f.readline())
 
-
-count = [0]*n
+count = [0] * n
 ans, k5, k7 = 0, 0
-
 
 for _ in range(n):
     x = int(f.readline())
@@ -17,9 +15,8 @@ for _ in range(n):
     if k5 == k7:
         ans += 1
 
-    ans += count[k5-k7]
+    ans += count[k5 - k7]
 
-    count[k5-k7] += 1
-
+    count[k5 - k7] += 1
 
 print(ans)

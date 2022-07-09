@@ -1,12 +1,10 @@
 f = open('27B.txt')
 n = int(f.readline())
 
-
 capture = [int(f.readline()) for _ in range(10)]
 mini = float('inf')
 
-
-for _ in range(n-10):
+for _ in range(n - 10):
     x = int(f.readline())
 
     for y in range(10):

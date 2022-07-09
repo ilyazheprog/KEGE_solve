@@ -7,7 +7,6 @@
 
 from itertools import permutations
 
-
-# буквы повторяются, обертываем в set() 
+# буквы повторяются, обертываем в set()
 d = [''.join(i) for i in set(permutations('МИМИКРИЯ'))]
 print(len(d))

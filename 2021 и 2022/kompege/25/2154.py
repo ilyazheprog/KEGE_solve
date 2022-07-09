@@ -5,6 +5,8 @@
 но менее 440. Вывести эти числа, справа от каждого вывести соответствующий ему 
 наибольший простой делитель.
 '''
+
+
 # https://prnt.sc/zw2X5DSLECVd
 
 
@@ -17,7 +19,7 @@ def f(x):
 
     for i in range(2, int(x ** 0.5) + 1):
         if x % i == 0:
-            dividers |= {i, x//i}
+            dividers |= {i, x // i}
 
     dividers = sorted(dividers)
     prime_dividers = [i for i in dividers if prime(i)]

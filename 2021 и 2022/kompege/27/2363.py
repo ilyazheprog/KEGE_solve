@@ -1,15 +1,13 @@
 f = open('C:\\Users\\XiaoMai\\Downloads\\27_B (4).txt')
 n = int(f.readline())
 
-
 a = [int(f.readline()) for _ in range(4)]
-p = [0]*117
-
+p = [0] * 117
 
 sum_all = sum(a)
 sum_q, count = 0, 0
 
-for _ in range(n-4):
+for _ in range(n - 4):
     x = int(f.readline())
     sum_all += x
 
@@ -23,6 +21,5 @@ for _ in range(n-4):
 
     a.pop(0)
     a.append(x)
-
 
 print(count)

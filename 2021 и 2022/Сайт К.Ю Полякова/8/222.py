@@ -14,14 +14,12 @@
 
 from itertools import product
 
-
 arr = []
 
 for i, letter in enumerate(product('АЗНС', repeat=5), start=1):
     word = ''.join(letter)
     if (word == 'САЗАН') or (word == 'ЗАНАС'):
         arr.append(i)
-
 
 # количество = длина + 1
 print(arr[1] - arr[0] + 1)

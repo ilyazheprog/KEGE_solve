@@ -3,7 +3,6 @@
 f = open('C:\\Users\\XiaoMai\\Downloads\\27-B (2).txt')
 n = int(f.readline())
 
-
 a = []
 c = 0
 
@@ -13,7 +12,7 @@ for _ in range(n):
 
     # d % 2 == (1 - ost)   -> только в этом случае сумма будет нечетна, если четна: !=
 
-    q = [d for d in a if (d % 2 == (1-ost))]
+    q = [d for d in a if (d % 2 == (1 - ost))]
 
     if (len(q) != 0):  # если массив не пустой
         min_q = min(q)  # минимальный
@@ -24,12 +23,6 @@ for _ in range(n):
     a.append(x)
 
 print(c)
-
-
-
-
-
-
 
 # 2 Способ
 

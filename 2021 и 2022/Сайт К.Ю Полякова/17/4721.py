@@ -12,17 +12,14 @@
 f = open('17-243.txt')
 arr = [int(x) for x in f.readlines()]
 
-
 sums_61 = ([sum(map(int, str(i))) for i in arr if (i % 61 == 0)])
 
 minn, k = float('inf'), 0
 
-
-for i in range(len(arr)-1):
-    d = sorted([arr[i], arr[i+1]])
+for i in range(len(arr) - 1):
+    d = sorted([arr[i], arr[i + 1]])
     if (d[1] > sums_61 and d[0] <= sums_61) and (d[0] % 100 == 33):
         k += 1
-        minn = min(arr[i] + arr[i+1], minn)
-
+        minn = min(arr[i] + arr[i + 1], minn)
 
 print(k, minn)

@@ -14,12 +14,10 @@ def func(let):
 
 amount = 0
 
-
 # пятеричная система счисления: 0, 1, 2, 3, 4
 for i in product('01234', repeat=6):
     word = ''.join(i)
     if func(word):
         amount += 1
-
 
 print(amount)

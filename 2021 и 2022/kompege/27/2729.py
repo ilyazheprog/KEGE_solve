@@ -1,12 +1,9 @@
 from itertools import combinations
 
-
 f = open('27B.txt')
 n = int(f.readline())
 
-
 numb = [[] for _ in range(11)]
-
 
 for _ in range(n):
     x = int(f.readline())
@@ -17,12 +14,10 @@ for _ in range(n):
         numb[x % 11].sort()
         del (numb[x % 11][-1])
 
-
 pick = []
 
 for i in numb:
     pick += i
-
 
 mak = float('inf')
 

@@ -8,16 +8,13 @@
 
 from itertools import product
 
-
 d = [''.join(i) for i in product('012345678', repeat=3) if len(set(i)) == 1]
 
 count = 0
-
 
 for i in product('012345678', repeat=7):
     word = ''.join(i)
     if (word[0] not in '0246') and (word[-3:] not in d):
         count += 1
-
 
 print(count)

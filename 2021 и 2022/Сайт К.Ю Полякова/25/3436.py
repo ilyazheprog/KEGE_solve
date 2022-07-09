@@ -4,6 +4,8 @@
 разностью d = 2. В ответе для каждого такого числа (в порядке возрастания) запишите 
 сначала само число, а потом – его максимальный нетривиальный делитель.
 '''
+
+
 # https://prnt.sc/A2tyC-T4a6Hn
 
 
@@ -22,8 +24,8 @@ def progression(number):
     if len(number) < 2:
         return False
 
-    for i in range(0, len(number)-1):
-        if (number[i]+2 != number[i+1]):
+    for i in range(0, len(number) - 1):
+        if (number[i] + 2 != number[i + 1]):
             return False
     else:
         return True

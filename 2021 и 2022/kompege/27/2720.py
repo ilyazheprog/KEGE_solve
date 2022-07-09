@@ -3,7 +3,6 @@
 f = open('27B.txt')
 n = int(f.readline())
 
-
 chet_7 = 0
 
 for _ in range(n):
@@ -12,20 +11,14 @@ for _ in range(n):
     if x % 7 == 0:
         chet_7 += 1
 
-
 nechet_7 = n - chet_7
 
-print((nechet_7*chet_7) + (chet_7*(chet_7-1)//2))
-
-
-
-
+print((nechet_7 * chet_7) + (chet_7 * (chet_7 - 1) // 2))
 
 # 2 Решение
 
 f = open('27B.txt')
 n = int(f.readline())
-
 
 answer, count_7 = 0, 0
 

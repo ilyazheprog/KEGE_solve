@@ -14,11 +14,10 @@ f = open('24.txt')
 s = f.readline()[:-1]
 s += s
 
-
 answer = 0
 
 for i in range(len(s)):
-    strin, start = s[i],  s[i]
+    strin, start = s[i], s[i]
     j = i + 1
 
     while j < len(s):

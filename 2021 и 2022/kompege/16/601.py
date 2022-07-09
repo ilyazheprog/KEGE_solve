@@ -10,7 +10,7 @@ count = 0
 def f(n):
     global count
     count += 1
-    
+
     if n >= 1:
         count += 1
         f(n - 1)

@@ -13,20 +13,17 @@
 f = open('17-1.txt')
 arr = [int(x) for x in f.readlines()]
 
-
 middle = sum(arr) / len(arr)
 count, max_sum = 0, 0
 
+for i in range(len(arr) - 2):
+    list_nums = sorted([arr[i], arr[i + 1], arr[i + 2]])
 
-for i in range(len(arr)-2):
-    list_nums = sorted([arr[i], arr[i+1], arr[i+2]])
-    
     if (list_nums[0] < middle) and (list_nums[1] < middle):
         # Берем по модулю(abs), True-False
-        ost = [(abs(list_nums[i]) % 10 == 8) for i in range(3)]  
+        ost = [(abs(list_nums[i]) % 10 == 8) for i in range(3)]
         if sum(ost) >= 2:
             count += 1
             max_sum = max(sum(list_nums), max_sum)
-
 
 print(count, max_sum)

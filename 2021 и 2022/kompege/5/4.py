@@ -5,7 +5,7 @@ def f(n):
     return int(b, 2)
 
 
-for i in range(1, 10**6):
+for i in range(1, 10 ** 6):
     if f(i) > 77:
         print(i)
         break

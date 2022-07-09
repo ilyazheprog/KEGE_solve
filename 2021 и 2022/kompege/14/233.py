@@ -8,10 +8,8 @@
 num = 3 * 16 ** 8 - 4 ** 5 + 3
 num_4 = ''
 
-
 while num > 0:
     num_4 += str(num % 4)
     num //= 4
-
 
 print(num_4.count('3'))

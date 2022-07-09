@@ -10,6 +10,8 @@ F(n) = F(n–1) + n · n + 5, при n > 18, не кратных 3
 Здесь «//» обозначает деление нацело. Определите количество натуральных значений 
 n из отрезка [1; 1000], для которых все цифры значения F(n) чётные.
 '''
+
+
 # https://prnt.sc/hdR2r2sF-Dgd
 
 
@@ -22,5 +24,5 @@ def f(n):
         return f(n - 1) + n * n + 5
 
 
-arr = [i for i in range(1, 1000+1) if all(int(x) % 2 == 0 for x in str(f(i)))]
+arr = [i for i in range(1, 1000 + 1) if all(int(x) % 2 == 0 for x in str(f(i)))]
 print(len(arr))

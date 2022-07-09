@@ -12,18 +12,15 @@
 f = open('17-1.txt')
 arr = [int(x) for x in f.readlines()]
 
-
 min_15 = min(i for i in arr if (i % 15 == 0) and (i > 0))
 count, min_sum = 0, float('inf')
 
-
-for i in range(len(arr)-1):
-    if (arr[i] % 2 != 0) and (arr[i+1] % 2 != 0):
+for i in range(len(arr) - 1):
+    if (arr[i] % 2 != 0) and (arr[i + 1] % 2 != 0):
         # оба числа нечётны
-        midd = (arr[i] + arr[i+1]) // 2  
+        midd = (arr[i] + arr[i + 1]) // 2
         if midd >= min_15:
             count += 1
             min_sum = min(min_sum, midd)
-
 
 print(count, min_sum)

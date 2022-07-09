@@ -1,5 +1,5 @@
-P = set(range(2, 20+1, 2))
-Q = set(range(5, 50+1, 5))
+P = set(range(2, 20 + 1, 2))
+Q = set(range(5, 50 + 1, 5))
 A = P | Q
 
 
@@ -13,6 +13,5 @@ def f(x):
 for i in P | Q:
     if not f(i):
         A.remove(i)
-
 
 print(len(A))

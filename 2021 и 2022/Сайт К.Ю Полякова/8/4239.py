@@ -7,6 +7,5 @@
 
 from itertools import permutations
 
-
 unique = set(''.join(i) for i in permutations('МИМИКРИЯ', r=8))
 print(len(unique))

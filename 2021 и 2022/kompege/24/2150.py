@@ -10,15 +10,13 @@
 f = open('24.txt')
 s = f.readline()
 
-
-symbol = [0]*26
+symbol = [0] * 26
 count = 0
 
-
 for i in range(len(s) - 4):
-    if (s[i] == 'C') and (s[i+1] == 'A') and (s[i+2] not in ['A', 'B', 'F']) and (s[i+3] == 'A') and (s[i+4] == 'C'):
-        symbol[ord(s[i+2]) - ord('A')] += 1
+    if (s[i] == 'C') and (s[i + 1] == 'A') and (s[i + 2] not in ['A', 'B', 'F']) and (s[i + 3] == 'A') and (
+            s[i + 4] == 'C'):
+        symbol[ord(s[i + 2]) - ord('A')] += 1
         count += 1
-
 
 print(chr(ord('A') + symbol.index(max(symbol))), count)

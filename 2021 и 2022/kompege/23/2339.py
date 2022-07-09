@@ -11,7 +11,6 @@
 # https://prnt.sc/tus6S7d16xfC
 
 
-
 # (I) Решение
 
 unique = set()
@@ -28,19 +27,15 @@ def func(start, count):
 func(1, 0)
 print(len(unique))
 
-
-
 # (II) Решение
 
 arr = [1]
 
-
 # "содержащей ровно 15 команд"
-for _ in range(15): 
+for _ in range(15):
     for j in range(len(arr)):
         remaining = arr.pop(0)
         arr.append(2 * remaining)
         arr.append(remaining * 2 + 1)
-
 
 print(len(arr))

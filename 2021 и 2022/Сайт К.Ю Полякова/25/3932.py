@@ -5,6 +5,8 @@
 которая начинается с наименьшего возможного числа. Для каждого числа из этой 
 последовательности запишите сначала само число, а затем количество его натуральных делителей.
 '''
+
+
 # https://prnt.sc/Ki8qT_EFL8A7
 
 
@@ -13,13 +15,13 @@ def func(number):
 
     for i in range(1, int(number ** 0.5) + 1):
         if number % i == 0:
-            dividers |= {i, number//i}
+            dividers |= {i, number // i}
 
     return len(dividers)
 
 
 for i in range(700000 + 1, 10 ** 8):
-    if func(i) < func(i+1) < func(i+2) < func(i+3) < func(i+4):
+    if func(i) < func(i + 1) < func(i + 2) < func(i + 3) < func(i + 4):
         c = i
         while c < i + 5:
             print(c, func(c))

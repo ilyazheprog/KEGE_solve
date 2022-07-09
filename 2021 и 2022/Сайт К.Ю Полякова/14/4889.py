@@ -9,11 +9,9 @@
 number = (9 ** 81) + (27 ** 729) - 4
 number_9 = []
 
-
 while number > 0:
     number_9.append(number % 9)
     number //= 9
-
 
 ans = [i for i in number_9 if ((i == 0) or (i == max(number_9)))]
 print(len(ans))

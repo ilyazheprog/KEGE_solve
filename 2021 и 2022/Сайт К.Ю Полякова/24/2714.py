@@ -12,19 +12,16 @@
 f = open('24.txt')
 s = str(f.readline())
 
-
 count, condition = 0, 1
 
-
 for i in range(len(s) - 1):
-    if (int(s[i]) < int(s[i+1])):
+    if (int(s[i]) < int(s[i + 1])):
         condition += 1
 
-        if (condition == 5) and (s[i+2] <= s[i+1]):
+        if (condition == 5) and (s[i + 2] <= s[i + 1]):
             count += 1
             condition = 1
     else:
         condition = 1
-
 
 print(count)

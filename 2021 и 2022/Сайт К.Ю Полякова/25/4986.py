@@ -23,7 +23,6 @@
 чётные автоматически не являются простыми, ведь делятся на двойку.
 '''
 
-
 from collections import defaultdict
 
 
@@ -44,7 +43,6 @@ def prime(n):
 palindroms = defaultdict(list)  # храним все простые палиндромы
 number_nech = '13579'  # наборы цифр для позиций
 nums = '0123456789'  # все цифры
-
 
 # Формирование палиндромов по логическому паттерну
 for a in number_nech:
@@ -86,7 +84,6 @@ for a in number_nech:
 
                     if prime(p):
                         palindroms[product(p)] += [int(p)]
-
 
 # Выводим результирующую группу
 print(*((sorted(max(palindroms.values(), key=len))[::-1])[:5])[::-1], sep='\n')

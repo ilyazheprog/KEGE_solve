@@ -8,7 +8,6 @@
 
 trash = []
 
-
 for i in range(1, 10000):
     d = i
     n = 1
@@ -19,6 +18,5 @@ for i in range(1, 10000):
 
     if n == 46:
         trash.append(i)
-
 
 print(min(trash) + max(trash))

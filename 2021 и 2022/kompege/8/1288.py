@@ -12,15 +12,12 @@
 
 from itertools import product
 
-
 amount = 0
-
 
 for i in product('ВИШНЯ', repeat=6):
     word = ''.join(i)
     if (word.count('В') <= 1 and word[0] != 'Ш' and
             word[-1] not in 'ИЯ' and word[4:] != 'ИЯ'):
         amount += 1
-
 
 print(amount)

@@ -16,7 +16,6 @@
 
 from itertools import *
 
-
 i = 0
 for i in product('АИМРЯ', repeat=4):
     i += 1

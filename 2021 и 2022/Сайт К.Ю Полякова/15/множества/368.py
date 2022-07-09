@@ -1,6 +1,6 @@
 A = set()
-P = set(range(2, 12+1, 2))
-Q = set(range(4, 12+1, 4)) | {116}
+P = set(range(2, 12 + 1, 2))
+Q = set(range(4, 12 + 1, 4)) | {116}
 
 
 def f(x):
@@ -13,6 +13,5 @@ def f(x):
 for i in P | Q:
     if not f(i):
         A.add(i)
-
 
 print(sum(A))

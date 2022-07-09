@@ -27,13 +27,11 @@ def func(d):
 
 count, min_arif = 0, float('inf')
 
-
-for i in range(1, len(arr)-1):
-    list_num = [arr[i-1], arr[i], arr[i+1]]
+for i in range(1, len(arr) - 1):
+    list_num = [arr[i - 1], arr[i], arr[i + 1]]
 
     if func(list_num):
         min_arif = min(min_arif, sum(list_num) // 3)
         count += 1
-
 
 print(count, min_arif)

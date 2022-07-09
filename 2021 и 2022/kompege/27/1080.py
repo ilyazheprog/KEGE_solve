@@ -1,11 +1,9 @@
 from itertools import permutations
 
-
 f = open('27-b.txt')
 n = int(f.readline())
 
-
-d = [[float('inf')]*4 for _ in range(9)]
+d = [[float('inf')] * 4 for _ in range(9)]
 
 for _ in range(n):
     x = int(f.readline())
@@ -14,8 +12,7 @@ for _ in range(n):
     d[ost].append(x)
 
     d[ost].sort(reverse=True)
-    del(d[ost][0])
-
+    del (d[ost][0])
 
 bigdata = []
 for i in d:
@@ -24,8 +21,7 @@ for i in d:
         if z != float('inf'):
             bigdata.append(z)
 
+answer = min([(a + b + c + d)
+              for a, b, c, d in permutations(bigdata, r=4) if (a + b + c + d) % 9 == 0])
 
-answer = min([(a+b+c+d)
-             for a, b, c, d in permutations(bigdata, r=4) if (a+b+c+d) % 9 == 0])
-             
 print(answer)

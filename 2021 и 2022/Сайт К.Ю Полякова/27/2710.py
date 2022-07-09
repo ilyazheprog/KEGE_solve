@@ -3,7 +3,6 @@
 f = open('C:\\Users\\XiaoMai\\Downloads\\27-35b.txt')
 n = int(f.readline())
 
-
 a = []
 
 c, c0 = 0, 0
@@ -16,19 +15,17 @@ for _ in range(n):
     else:
         if (c0 > 0):
             for q in a:
-                if ((q[1]-c0) != 0) and ((q[0]+x) % 2 == 0):
+                if ((q[1] - c0) != 0) and ((q[0] + x) % 2 == 0):
                     c += 1
 
         a.append([x, c0])
 
 print(c)
 
-
 # 2) Способ
 
 f = open('27-35b.txt')
 n = int(f.readline())
-
 
 there_is_zero, without = [0, 0], [0, 0]
 ans = 0

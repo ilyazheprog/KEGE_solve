@@ -1,11 +1,9 @@
 f = open('27b.txt')
 N = int(f.readline())
 
-
 s = {0: (0, 0)}
 
 m = 0
-
 
 for _ in range(N):
     x = int(f.readline())
@@ -16,6 +14,5 @@ for _ in range(N):
     s = {x[1] % 3: x for x in sorted(c)}
 
     m = max(m, s.get(0, (0, 0))[0])
-
 
 print(m)

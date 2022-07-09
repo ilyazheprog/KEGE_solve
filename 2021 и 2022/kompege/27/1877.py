@@ -1,15 +1,13 @@
 f = open('27B.txt')
 n = int(f.readline())
 
-
 l = [float('inf')] * 69
 sums = [float('inf')] * 69
 
 max_sum, min_len = 0, float('inf')
 s = 0
 
-
-for i in range(1, n+1):
+for i in range(1, n + 1):
     x = int(f.readline())
     s += x
 
@@ -29,6 +27,5 @@ for i in range(1, n+1):
     if sums[s % 69] > s:
         sums[s % 69] = s
         l[s % 69] = i
-
 
 print(min_len)

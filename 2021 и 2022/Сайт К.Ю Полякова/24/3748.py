@@ -12,21 +12,17 @@
 f = open('24-157.txt')
 s = f.readline()
 
-
-arr = [0]*26
+arr = [0] * 26
 
 for i in range(len(s) - 2):
-    if s[i] == s[i+1]:
-        arr[ord(s[i+2]) - ord('A')] += 1
-
+    if s[i] == s[i + 1]:
+        arr[ord(s[i + 2]) - ord('A')] += 1
 
 elem, often = 0, 0
-
 
 for i in range(len(arr)):
     if arr[i] > often:
         often = arr[i]
         elem = i
-
 
 print(chr(elem + ord('A')) + str(often))

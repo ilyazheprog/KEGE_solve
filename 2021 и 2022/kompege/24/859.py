@@ -9,13 +9,10 @@
 f = open('24.txt')
 s = f.readlines()
 
-
 count = 0
-
 
 for i in s:
     if i.count('S') == i.count('X'):
         count += 1
-
 
 print(count)

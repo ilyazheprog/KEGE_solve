@@ -11,26 +11,22 @@
 
 from itertools import combinations
 
-
 f = open('17-328.txt')
 arr = [int(x) for x in f.readlines()]
-
 
 # нашли числа -> перевод в строку -> соединим элементы -> найдем сумму цифр строки
 summ_22 = sum(map(int, ''.join((str(i) for i in arr if (i % 22 == 0)))))
 count, min_sum = 0, float('inf')
 
-
-for i in range(len(arr)-2):
+for i in range(len(arr) - 2):
     # комбинации двух чисел превращаем в сумму (восьмеричная запись)
     summ = [oct(sum(x))[2:]
-            for x in list(combinations([arr[i], arr[i+1], arr[i+2]], r=2))]
+            for x in list(combinations([arr[i], arr[i + 1], arr[i + 2]], r=2))]
 
     # перебор цифр сумм пар чисел через генератор
     if (all(t[j] not in '1357' for t in summ for j in range(len(t))) and
-            (arr[i] + arr[i+1] + arr[i+2]) < summ_22):
+            (arr[i] + arr[i + 1] + arr[i + 2]) < summ_22):
         summ_22 += 1
-        min_sum = min(min_sum, arr[i] + arr[i+1] + arr[i+2])
-
+        min_sum = min(min_sum, arr[i] + arr[i + 1] + arr[i + 2])
 
 print(summ_22, min_sum)

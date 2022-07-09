@@ -14,16 +14,13 @@
 f = open('17-336.txt')
 arr = [int(x) for x in f.readlines()]
 
-
 max_num_37 = max(i for i in arr if i % 37 == 0)
 count, min_sum = 0, float('inf')
 
-
-for i in range(len(arr)-1):
-    if (((arr[i] % max_num_37 == 0) or (arr[i+1] % max_num_37 == 0)) and
-            (arr[i]+arr[i+1]) % max_num_37 > 30):
+for i in range(len(arr) - 1):
+    if (((arr[i] % max_num_37 == 0) or (arr[i + 1] % max_num_37 == 0)) and
+            (arr[i] + arr[i + 1]) % max_num_37 > 30):
         count += 1
-        min_sum = min(min_sum, arr[i] + arr[i+1])
-
+        min_sum = min(min_sum, arr[i] + arr[i + 1])
 
 print(count, min_sum)

@@ -10,7 +10,6 @@
 
 from itertools import *
 
-
 arr = []
 
 for i in permutations('АИМР', r=4):
@@ -19,7 +18,6 @@ for i in permutations('АИМР', r=4):
         arr.append(word)
 
 arr.sort()
-
 
 for i, elem in enumerate(arr, start=1):
     if elem == 'МАРИАННА':

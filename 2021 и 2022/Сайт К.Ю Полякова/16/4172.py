@@ -23,5 +23,5 @@ def F(n):
         return F(n - 2) + 2 * n
 
 
-arr = [F(i) for i in range(40, 50+1)]
+arr = [F(i) for i in range(40, 50 + 1)]
 print(sum(arr))

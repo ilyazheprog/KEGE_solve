@@ -10,15 +10,12 @@ DD-подстроками назовём последовательности с
 f = open('24.txt')
 s = f.readline()
 
-
 s = s.replace('D', ' ')
 
 min_string = float('inf')
 
-
 for i in s.split():
     # +2 , т.к. граничные входят
     min_string = min(len(i) + 2, min_string)
-
 
 print(min_string)

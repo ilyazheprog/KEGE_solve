@@ -17,10 +17,10 @@ arr = [int(x) for x in f]
 def f(x):
     d = set()
 
-    for i in range(1, int(x**0.5)+1):
+    for i in range(1, int(x ** 0.5) + 1):
         if x % i == 0:
             d.add(i)
-            d.add(x//i)
+            d.add(x // i)
 
     d = sorted(d)
     condition = [i for i in d if (i in [2, 3, 5, 7])]
@@ -32,12 +32,10 @@ def f(x):
 
 count, min_elem, max_elem = 0, float('inf'), float('-inf')
 
-
 for i in range(len(arr)):
     if f(arr[i]) and arr[i] != 0:
         count += 1
         min_elem = min(min_elem, arr[i])
         max_elem = max(max_elem, arr[i])
-
 
 print(count, min_elem + max_elem)

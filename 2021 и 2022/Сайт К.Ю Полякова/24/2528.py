@@ -20,5 +20,4 @@ def F(n):
 for i in range(ord('A'), ord('Z') + 1):
     s = s.replace(chr(i), ' ', s.count(chr(i)))
 
-
 print(max(int(x) for x in s.split() if (F(x) == True)))

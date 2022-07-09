@@ -8,18 +8,15 @@
 
 from itertools import *
 
-
 vowels = [''.join(x) for x in product('АИОУ', repeat=2)]
 consonants = [''.join(i) for i in product('БКЛН', repeat=2)]
 
 answer = 0
-
 
 for i in permutations('АБИКОЛУН', r=8):
     word = ''.join(i)
     if (all(comb not in word for comb in vowels) and
             all(comb not in word for comb in consonants)):
         answer += 1
-
 
 print(answer)

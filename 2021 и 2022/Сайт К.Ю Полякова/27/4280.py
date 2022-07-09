@@ -3,14 +3,13 @@
 f = open('C:\\Users\\XiaoMai\\Downloads\\27-74b.txt')
 n = int(f.readline())
 
-
 mas = [[0, 0]]
 count = 0
 
 for _ in range(n):
     x = int(f.readline())
 
-    mas = [[x+b, c+1] for b, c in mas]+[[x, 1]]
+    mas = [[x + b, c + 1] for b, c in mas] + [[x, 1]]
     num = -1
 
     for i in mas:
@@ -23,14 +22,10 @@ for _ in range(n):
 
 print(count)
 
-
-
-
 # 2) Способ
 
 f = open('27-74b.txt')
 n = int(f.readline())
-
 
 s = [[0, 0]]
 k = 0
@@ -47,11 +42,11 @@ for i in range(n):
             k += 1
 
         if cmb[j][1] > 20:
-            del(cmb[j])
+            del (cmb[j])
             j -= 1
 
         j += 1
 
     s = cmb
-    
+
 print(k)

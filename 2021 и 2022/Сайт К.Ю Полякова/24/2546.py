@@ -8,13 +8,11 @@
 f = open('24.txt')
 s = f.readline()
 
-
 max_count, count, i = 0, 0, 1
-
 
 while True:
     try:
-        if (s[i-1] == 'K') and (s[i] == 'O') and (s[i+1] == 'T'):
+        if (s[i - 1] == 'K') and (s[i] == 'O') and (s[i + 1] == 'T'):
             count += 1
             i += 3
         else:
@@ -23,6 +21,5 @@ while True:
             i += 1
     except:
         break
-
 
 print(max_count)

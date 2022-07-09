@@ -11,7 +11,6 @@ def func(x):
 ans = float('-inf')
 s = [[0, 0]]
 
-
 for _ in range(n):
     x = int(f.readline())
 
@@ -24,6 +23,5 @@ for _ in range(n):
         ans = max(ans, s1)
 
     s = s.values()
-
 
 print(ans)

@@ -11,13 +11,10 @@ s = f.readline()
 
 s = s.split('A')
 
-
 max_string = 0
 
-
 for i in range(len(s) - 1):
-    new_str = s[i] + 'A' + s[i+1]
+    new_str = s[i] + 'A' + s[i + 1]
     max_string = max(len(new_str), max_string)
-
 
 print(max_string)
